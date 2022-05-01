@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Aplica estilos gerais na página */
+body {
+  color: Indigo;
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Impede que quiz fique muito largo */
+.quiz {
+  width: 100%;
+  max-width: 360px;
+  margin-bottom: 48px;
+}
+
+/* Impede events de clique após o primeiro clique */
+.quiz.inactive {
+  pointer-events: none;
+}
+
+/* Estiliza o título */
+h1 {
+  font-size: 24px;
+}
+
+/* Remove o espaçamento padrão da lista */
+ol {
+  padding: 0;
+}
+
+/* Estiliza alternativas */
+li {
+  padding-left: 16px; 
+  display: flex;
+  align-items: center;
+  background: GhostWhite;
+  margin-bottom: 8px;
+  height: 48px;
+  list-style-type: none;
+  font-size: 20px;
+}
+
+/* Muda cor de fundo ao passar o cursor por cima */
+li:hover {
+  background: Lavender;
+  cursor: pointer;
+}
+
+/* Muda a cor quando clicar (o padrão é errar) */
+li.clicked {
+  background: DeepPink;
+  color: White;
+}
+
+/* Se clicar na alternativa correta, aplica esses estilos */
+li.clicked.correct {
+  background: Turquoise;
+  color: Indigo;
+}
+
+/* Reduz largura da imagem */
+img {
+  width: 48px;
+}
+
+/* Aplica negrito no texto de resultado */
+.result {
+  font-weight: bold;
+}
+
+/* Esconde items para mostrar depois */
+.answer,
+img {
+  display: none
+}
