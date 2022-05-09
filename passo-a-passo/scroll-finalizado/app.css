@@ -1,0 +1,38 @@
+body{
+  margin: 0;
+  color: black;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.passos{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index:2;
+}
+
+.passos > div{
+  position: absolute;
+  margin: 0 auto;
+  display: none;
+}
+
+.passos > div.passo-ativo{
+  display: block;
+}
+
+.gatilhos{
+  margin-bottom: 50vh;
+}
+
+.gatilhos > div{
+  /* border:4px solid red; */
+  height: 100vh;
+  width: 100vw;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passo a passo com scroll</title>
+    <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <main>
+
+    <section class="passos">
+      <!-- criar 5 divs, uma para cada passo -->
+
+      <div class="passo-0 passo-ativo">
+        <img src="images/passo-0.svg" />
+      </div>
+
+      <div class="passo-1">
+        <img src="images/passo-1.svg" />
+      </div>
+
+      <div class="passo-2">
+        <img src="images/passo-2.svg" />
+      </div>
+
+      <div class="passo-3">
+        <img src="images/passo-3.svg" />
+      </div>
+
+      <div class="passo-4">
+        <img src="images/passo-4.svg" />
+      </div>
+    </section>
+
+
+    <div class="gatilhos">
+      <div data-alvo="passo-0"></div>
+      <div data-alvo="passo-1"></div>
+      <div data-alvo="passo-2"></div>
+      <div data-alvo="passo-3"></div>
+      <div data-alvo="passo-4"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </main>
+</body>
+</html>
