@@ -1,6 +1,8 @@
-body{
+html,body{
+  width: 100%;
+  height: 100%;
   margin: 0;
-  color: black;
+  background-color: #F5F4F6;
 }
 
 *{
@@ -18,21 +20,33 @@ body{
 }
 
 .passos > div{
+  width: 100%;
+  height: 100%;
   position: absolute;
-  margin: 0 auto;
+  display: flex;
   display: none;
+  align-items: center;
 }
 
 .passos > div.passo-ativo{
+  display: flex;
+}
+
+.passos > div > *{
   display: block;
 }
 
-.gatilhos{
-  margin-bottom: 50vh;
+.passos > div > img{
+  width: 100%;
 }
 
+.gatilhos{
+  position: absolute;
+}
 .gatilhos > div{
   /* border:4px solid red; */
   height: 100vh;
   width: 100vw;
+  z-index:100;
+  padding: 10%;
 }
