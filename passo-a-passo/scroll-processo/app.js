@@ -15,8 +15,8 @@ function escutaScroll(){
         // Verificar se o gatilho está acima do topo da página (IF)
             // se sim, adiciona a classe que exibe o gráfico
             // caso contrário, retire a classe
-
 }
+
 // 2. pedir ao navegador para escutar 
 // o evento de rolagem da página
 window.addEventListener('scroll', escutaScroll);
