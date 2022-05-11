@@ -9,6 +9,11 @@ html, body{
     box-sizing: border-box; 
 }
 
+main{
+    width: 100%;
+    height: 100%;
+}
+
 .passos{
     width: 100%;
     height: 100%;
@@ -16,9 +21,18 @@ html, body{
     align-items: center;
     justify-content: center;
     position: fixed;
-    border: 3px solid yellow;
+    border: 3px solid black;
 }
 
 .passos > div{
     position: absolute;
+}
+
+.gatilhos{
+    position:absolute;
+}
+.gatilhos > div{
+    border: 1px solid red;
+    height: 100vh;
+    width: 100vw;
 }

@@ -1,8 +1,10 @@
 // 1. criar uma função para verificar 
 // se o gatilho chegou ao topo da página
-
+function escutaScroll(){
     // Dentro desta função, devemos:
     // Pegar a lista de gatilhos
+    let gatilhos = document.querySelectorAll('.gatilhos > div');
+    console.log(gatilhos);
 
     // A função deve...
     // Fazer loop pela lista de gatilhos (FOR)
@@ -14,6 +16,7 @@
             // se sim, adiciona a classe que exibe o gráfico
             // caso contrário, retire a classe
 
-            
+}
 // 2. pedir ao navegador para escutar 
 // o evento de rolagem da página
+window.addEventListener('scroll', escutaScroll);
