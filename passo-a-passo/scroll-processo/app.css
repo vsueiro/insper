@@ -1,10 +1,24 @@
-html,body{
+html, body{
     width: 100%;
     height: 100%;
     margin: 0;
     background-color: #F5F4F6;
-  }
-  
-  *{
-    box-sizing: border-box;
-  }
+}
+
+*{
+    box-sizing: border-box; 
+}
+
+.passos{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    border: 3px solid yellow;
+}
+
+.passos > div{
+    position: absolute;
+}
