@@ -19,7 +19,6 @@ function onClick(event){
     elementoAlvo.classList.add('passo-ativo');
 }
 
-
 for(let botao of botoes){
     botao.addEventListener('click', onClick);
 }

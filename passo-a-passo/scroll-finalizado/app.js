@@ -5,11 +5,14 @@ function escutaScroll(event){
     // Pegar a lista de gatilhos
     let gatilhos = document.querySelectorAll(".gatilhos > div");
 
+    // A função deve...
+    // Fazer loop pela lista de gatilhos
     for(let gatilho of gatilhos){
-        // Pegar a posição atual do gatilho
+        // Para cada um deles, pegar a posição atual
         let posicao = gatilho.getBoundingClientRect();
-        // Pegar o passo alvo daquele gatilho
+        // Para cada um deles, pegar o valor da propriedade data-alvo
         let alvo = gatilho.dataset.alvo;
+        // Selecionar o elemento reference a este alvo
         let passo = document.querySelector('.'+alvo);
         // Verificar se o gatilho está acima do topo da página
         if(posicao.top <= 0 && posicao.top > -posicao.height){

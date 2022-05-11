@@ -37,7 +37,8 @@ html,body{
 }
 
 .passos > div > img{
-  width: 100%;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .gatilhos{
