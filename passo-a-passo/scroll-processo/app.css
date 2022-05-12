@@ -21,6 +21,11 @@ html, body{
 
 .passos > div{
     position: absolute;
+    display: none;
+}
+
+.passos > div.passo-ativo{
+    display: flex;
 }
 
 .gatilhos{
@@ -28,6 +33,6 @@ html, body{
 }
 .gatilhos > div{
     border: 1px solid red;
-    height: 100vh;
+    height: 200vh;
     width: 100vw;
 }
