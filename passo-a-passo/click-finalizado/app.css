@@ -9,6 +9,7 @@ html, body{
 *{
   box-sizing: border-box;
 }
+
 main{
   width: 100%;
   height: 100%;
@@ -50,7 +51,8 @@ ul.botoes button{
   font-size: 18px;
   cursor: pointer;
   color: #fff;
-  transition: width 0.3s ease-out;
+
+  transition: width 0.3s ease-out background-color 0.3s ease-out;
   font-weight: 600;
   letter-spacing: 0.03rem;
 }
@@ -74,6 +76,27 @@ ul.botoes button:hover{
 }
 
 .passos > div{
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  opacity: 0;
+}
+
+.passos > div.passo-ativo{
+  opacity: 1;
+}
+
+.passos > div > img{
+  width: 100%;
+  max-width: 860px;
+  align-self: center;
+  margin: auto;
+}
+
+/* .passos > div{
   height: 100%;
   width: 100%;
   grid-column: 1 / 2;
@@ -95,4 +118,4 @@ ul.botoes button:hover{
 .passos > div.passo-ativo{
   opacity: 1;
   z-index:10;
-}
+} */

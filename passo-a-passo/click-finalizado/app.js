@@ -1,25 +1,32 @@
 let botoes = document.querySelectorAll(".botoes button");
 let passos = document.querySelectorAll(".passos > div");
 
-function onClick(event){
+// código executado ao clicar
+function aoClicar(event){
     let botaoAtual = event.target;
-    let dataAlvo = event.target.dataset.alvo;
-    let elementoAlvo = document.querySelector('.' + dataAlvo);
-    let passoAnterior = document.querySelector('.passo-ativo');
+    let dataAlvo = botaoAtual.dataset.alvo;// .passo-3
 
-    for(let botao of botoes){
-        if(botao != botaoAtual){
-            botao.classList.remove('botao-ativo');
-        }else{
-            botao.classList.add('botao-ativo');
-        }
+    let elementoAlvo = document.querySelector(dataAlvo);
+    let passoAnterior = document.querySelector('.passo-ativo');
+    let botaoAnterior = document.querySelector('.botao-ativo');
+
+    if(botaoAtual !== botaoAnterior){
+
+        // inserir a classe 'passo-ativo' no elemento alvo
+        elementoAlvo.classList.add('passo-ativo');
+        // remover a classe 'passo-ativo' do elemento anteriormente exibido
+        passoAnterior.classList.remove('passo-ativo');
+
+        // adiciona a classe 'botao-ativo' ao botão clicado
+        botaoAtual.classList.add('botao-ativo');
+        // remove a classe 'botao-ativo' do botão anterior
+        botaoAnterior.classList.remove('botao-ativo');
+        
     }
     
-    passoAnterior.classList.remove('passo-ativo');
-    elementoAlvo.classList.add('passo-ativo');
 }
 
-
 for(let botao of botoes){
-    botao.addEventListener('click', onClick);
+    // código a repetir
+    botao.addEventListener('click', aoClicar);
 }
