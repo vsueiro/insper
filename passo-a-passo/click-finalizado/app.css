@@ -44,7 +44,7 @@ ul.botoes button{
   border: 0;
   padding: 20px;
   display: flex;
-  align-items: start;
+  align-items: center;
   width: 75%;
   text-align: left;
   font-family: Arial, Helvetica, sans-serif;
@@ -52,7 +52,7 @@ ul.botoes button{
   cursor: pointer;
   color: #fff;
 
-  transition: width 0.3s ease-out background-color 0.3s ease-out;
+  transition: width 0.3s ease-out, background-color 0.3s ease-out;
   font-weight: 600;
   letter-spacing: 0.03rem;
 }
@@ -61,6 +61,7 @@ ul.botoes button.botao-ativo{
   width: 100%;
   background: #000;
 }
+
 ul.botoes button:hover{
   width: 100%;
 }
@@ -75,7 +76,7 @@ ul.botoes button:hover{
   z-index:2;
 }
 
-.passos > div{
+.passos > div {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   height: 100%;
@@ -83,6 +84,7 @@ ul.botoes button:hover{
   margin: auto;
   display: flex;
   opacity: 0;
+  transition: opacity 0.2s linear;
 }
 
 .passos > div.passo-ativo{
@@ -95,27 +97,3 @@ ul.botoes button:hover{
   align-self: center;
   margin: auto;
 }
-
-/* .passos > div{
-  height: 100%;
-  width: 100%;
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-  margin: auto;
-  opacity: 0;
-  transition: opacity 0.5s ease-out;
-  display: flex;
-  z-index: 0;
-}
-
-.passos > div > img{
-  width: 100%;
-  max-width: 860px;
-  align-self: center;
-  margin: auto;
-}
-
-.passos > div.passo-ativo{
-  opacity: 1;
-  z-index:10;
-} */
