@@ -32,6 +32,37 @@ let dados = [
   }
 ]
 
+// Seleciona a <ul> da página, para popularmos ela
+let lista = document.querySelector( 'ul' )
+
+// Cria elementos para o gráfico
+for ( let dado of dados ) {
+
+  // Cria elemento pai (<li>)
+  let item = document.createElement( 'li' )
+
+  // Cria elementos filhos (<span>)
+  let rotulo = document.createElement( 'span' )
+  let barra = document.createElement( 'span' )
+  let percentual = document.createElement( 'span' )
+  
+  // Adiciona texto ao elemento
+  rotulo.textContent = dado.regiao
+
+  // Adiciona classes para aplicar CSS e selecionar via JS
+  rotulo.classList.add( 'rotulo' )
+  barra.classList.add( 'barra' )
+  percentual.classList.add( 'percentual' )
+
+  // Insere os elementos na página
+  item.append( rotulo )
+  item.append( barra )
+  item.append( percentual )
+
+  lista.append( item )
+
+}
+
 // Seleciona todas as <li> da página
 let itens = document.querySelectorAll( 'li' )
 
