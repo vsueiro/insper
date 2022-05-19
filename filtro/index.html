@@ -4,22 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Filtro</title>
-    <style>
-      .rotulo {
-        display: inline-block;
-        width: 100px;
-      }
-      .barra {
-        display: inline-block;
-        width: 0;
-        height: 10px;
-        background: orange;
-        transition: all 1s;
-      }
-    </style>
+    <link rel="stylesheet" href="essencial.css">
+    <link rel="stylesheet" href="estetico.css">
   </head>
   <body>
-    
+
     <label>
       Quantas casas têm um
       <select>
@@ -63,7 +52,6 @@
     </ul>
 
     <footer>
-      <p>Percentual de domicílios com ao menos um animal.</p>
       <p>
         Fonte:
         <a href="https://sidra.ibge.gov.br/pesquisa/pns">Pesquisa Nacional de Saúde 2019</a>,
@@ -71,79 +59,7 @@
       </p>
     </footer>
 
-    <script>
-      let dados = [
-        {
-          "regiao": "Todo o Brasil",
-          "gatos": 19,
-          "cachorros": 46
-        },
-        {
-          "regiao": "Norte",
-          "gatos": 25,
-          "cachorros": 52
-        },
-        {
-          "regiao": "Nordeste",
-          "gatos": 24,
-          "cachorros": 38
-        },
-        {
-          "regiao": "Sudeste",
-          "gatos": 15,
-          "cachorros": 44
-        },
-        {
-          "regiao": "Sul",
-          "gatos": 21,
-          "cachorros": 57
-        },
-        {
-          "regiao": "Centro-Oeste",
-          "gatos": 17,
-          "cachorros": 56
-        }
-      ]
-      
-      let itens = document.querySelectorAll( 'li' )
-      let seletor = document.querySelector( 'select' )
-      
-      seletor.addEventListener( 'change', redimensionaBarras )
-
-      function redimensionaBarras() {
-
-        let animal = seletor.value
-        
-        for ( let dado of dados ) {
-
-          let regiao = dado.regiao
-
-          for ( let item of itens ) {
-
-            let rotulo = item.querySelector( '.rotulo' )
-
-            if ( rotulo.textContent == regiao ) {
-              
-              let barra = item.querySelector( '.barra' )
-              let percentual = item.querySelector( '.percentual' )
-
-              let valor = dado[ animal ]
-              let largura = valor * 4
-
-              barra.style.width = largura + 'px' 
-              percentual.textContent = valor + '%'
-
-            }
-
-          }
-
-        }
-
-      }
-
-      redimensionaBarras()
-
-    </script>
+    <script src="app.js"></script>
 
   </body>
 </html>
