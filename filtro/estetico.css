@@ -8,14 +8,14 @@ html {
   display: flex;
   justify-content: center;
   background: Lavender;
-  padding: 24px;
+  padding: 32px;
 }
 
 body {
   font-family: sans-serif;
   background: GhostWhite;
   color: Indigo;
-  padding: 48px;
+  padding: 32px 48px;
   border-radius: 16px;
   max-width: 600px;
   line-height: 1.5;
@@ -33,26 +33,48 @@ ul {
 }
 
 li:first-child .barra {
-  background: DeepPink; 
+  background: RebeccaPurple; 
+  position: relative;
+}
+
+li:first-child .barra::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 150px;
+  top: -10px;
+  right: 0;
+  width: 0px;
+  border-right: 1px dashed Indigo;
+  z-index: 1;
 }
 
 li:first-child .rotulo {
   font-weight: bold;
 }
 
+li:first-child .percentual {
+  color: Indigo;
+}
+
+.percentual {
+  position: relative;
+  color: DeepPink;
+  font-weight: bold;
+  z-index: 2;
+}
+
 select {
   all: unset;
   color: DeepPink;
-  border-bottom: 2px dashed DeepPink;
+  -webkit-text-fill-color: DeepPink;
+  padding: 2px 8px;
+  border-radius: 8px;
+  border: 2px solid Lavender;
 }
 
 .barra {
   border-radius: 4px;
-}
-
-.percentual {
-  color: DeepPink;
-  font-weight: bold;
 }
 
 a {
@@ -62,12 +84,11 @@ a {
 @media (max-width: 600px) {
 
   html {
-    padding: 24px 16px;
+    padding: 32px 16px;
   }
 
   body {
     padding: 24px;
-    /* border-radius: 8px; */
   }
 
   li > span:first-child {
@@ -77,4 +98,9 @@ a {
   li {
     margin-bottom: 8px;
   }
+
+  li:first-child .barra::after {
+    display: none;
+  }
+  
 }
