@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  display: flex;
+  justify-content: center;
+  background: Lavender;
+  padding: 32px;
+}
+
+body {
+  font-family: sans-serif;
+  background: GhostWhite;
+  color: Indigo;
+  padding: 32px 48px;
+  border-radius: 16px;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+label {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 48px 0;
+}
+
+li:first-child .barra {
+  background: RebeccaPurple; 
+  position: relative;
+}
+
+li:first-child .barra::after {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 150px;
+  top: -10px;
+  right: 0;
+  width: 0px;
+  border-right: 1px dashed Indigo;
+  z-index: 1;
+}
+
+li:first-child .rotulo {
+  font-weight: bold;
+}
+
+li:first-child .percentual {
+  color: Indigo;
+}
+
+.percentual {
+  position: relative;
+  color: DeepPink;
+  font-weight: bold;
+  z-index: 2;
+}
+
+select {
+  all: unset;
+  color: DeepPink;
+  -webkit-text-fill-color: DeepPink;
+  padding: 2px 8px;
+  border-radius: 8px;
+  border: 2px solid Lavender;
+}
+
+.barra {
+  border-radius: 4px;
+}
+
+a {
+  color: inherit;
+}
+
+@media (max-width: 600px) {
+
+  html {
+    padding: 32px 16px;
+  }
+
+  body {
+    padding: 24px;
+  }
+
+  li > span:first-child {
+    display: block;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  li:first-child .barra::after {
+    display: none;
+  }
+  
+}
