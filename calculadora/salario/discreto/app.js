@@ -1,97 +1,103 @@
-let file = 'pnad-renda-2020.json'
-let salaries = []
+let entrada = document.querySelector( 'input' )
+let saida = document.querySelector( 'output' )
+let preenchimento = document.querySelector( '.preenchimento' )
+let baldes = document.querySelector( '.baldes' )
 
-fetch( file )
-  .then( response => response.json() )
-  .then( data => {
+let arquivo = 'pnad-renda-2020.json'
+let salarios = []
 
-    salaries = data
-    createBins( salaries )
-    salaries.reverse()
+fetch( arquivo )
+  .then( resposta => resposta.json() )
+  .then( dados => {
+
+    salarios = dados
+    criarBaldes( salarios )
+    salarios.reverse()
 
   } )
 
-function createBins( salaries ) {
-  for ( let salary of salaries ) {
-    let size = salary.to - salary.from
-    let bin = document.createElement( 'div' )
-    bin.style.width = size + '%'
-    bins.appendChild( bin )
+function criarBaldes( salarios ) {
+  for ( let salario of salarios ) {
+    let tamanho = salario.ate - salario.de
+    let balde = document.createElement( 'div' )
+    balde.style.width = tamanho + '%'
+    baldes.appendChild( balde )
   }
 }
 
-function highlightBin( number ) {
+function destacarBalde( numero ) {
 
-  let all = document.querySelectorAll( '#bins > div' )
-  let index = 0
+  let baldes = document.querySelectorAll( '.baldes > div' )
+  let indice = 0
 
-  for ( let bin of all ) {
+  for ( let balde of baldes ) {
 
-    bin.classList.remove( 'you', 'on' )
+    balde.classList.remove( 'voce', 'ativo' )
 
-    if ( index < number )
-      bin.classList.add( 'on' )
+    if ( indice < numero )
+      balde.classList.add( 'ativo' )
 
-    if ( index === number )
-      bin.classList.add( 'you' )
+    if ( indice === numero )
+      balde.classList.add( 'voce' )
 
-    index++
+    indice++
   }
 
 }
  
-function validate() {
+function validar() {
 
-  const value = parseInt( input.value )
+  let valor = parseInt( entrada.value )
   
-  if ( isNaN( value ) || value < 0 )
-    clear()
+  if ( isNaN( valor ) || valor < 0 )
+    limpar()
   else
-    calculate( value )
+    calcular( valor )
 
 }
 
-function show( percentile ) {
-  output.textContent = percentile + '%'
+function mostrar( percentil ) {
+  saida.textContent = percentil + '%'
 }
 
-function calculate( value ) {
+function calcular( valor ) {
 
-  let index = 0
+  let indice = 0
 
-  for ( let salary of salaries ) {
+  for ( let salario of salarios ) {
 
-    if ( value > salary.lowerLimit ) {
+    if ( valor > salario.limiteInferior ) {
 
-      let percentile = salary.from
-      let number = salaries.length - index - 1
+      let percentil = salario.de
+      let numero = salarios.length - indice - 1
 
-      if ( number === 0 ) {
-        clear()
+      if ( numero === 0 ) {
+        limpar()
       } else {
-        highlightBin( number )
-        show( percentile )
+        destacarBalde( numero )
+        mostrar( percentil )
       }
 
       break
 
     }
-    index++
+    indice++
   }
 
 }
 
-function clear() {
-  output.textContent = '…%'
+function limpar() {
 
-  let all = document.querySelectorAll( '#bins > div' )
-  let index = 0
+  saida.textContent = '…%'
 
-  for ( let bin of all ) {
-    bin.classList.remove( 'you', 'on' )
-    index++
+  let baldes = document.querySelectorAll( '.baldes > div' )
+  let indice = 0
+
+  for ( let balde of baldes ) {
+    balde.classList.remove( 'voce', 'ativo' )
+    indice++
   }
 
 }
 
-input.addEventListener( 'input', validate )
+entrada.addEventListener( 'input', validar )

@@ -1,47 +1,56 @@
-let file = 'pnad-renda-2020.json'
-let salaries = []
+let entrada = document.querySelector( 'input' )
+let saida = document.querySelector( 'output' )
+let preenchimento = document.querySelector( '.preenchimento' )
+let balde = document.querySelector( '.balde' )
 
-fetch( file )
-  .then( response => response.json() )
-  .then( data => salaries = data.reverse() )
+let arquivo = 'pnad-renda-2020.json'
+let salarios = []
 
-function validate() {
+fetch( arquivo )
+  .then( resposta => resposta.json() )
+  .then( dados => salarios = dados.reverse() )
 
-  const value = parseInt( input.value )
+function validar() {
+
+  let valor = parseInt( entrada.value )
   
-  if ( isNaN( value ) || value < 0 )
-    clear()
+  if ( isNaN( valor ) || valor < 0 )
+    limpar()
   else
-    calculate( value )
+  calcular( valor )
 
 }
 
-function calculate( value ) {
+function calcular( valor ) {
 
-  for ( let salary of salaries ) {
-    if ( value > salary.lowerLimit ) {
-      show( salary.from )
-      resizeBin( salary )
+  limpar()
+
+  for ( let salario of salarios ) {
+
+    if ( valor > salario.limiteInferior ) {
+      mostrar( salario.de )
+      ajustarBalde( salario )
       break
     }
+
   }
 
 }
 
-function show( percentile ) {
-  output.textContent = percentile + '%'
-  fill.style.width = percentile + '%'
+function mostrar( percentil ) {
+  saida.textContent = percentil + '%'
+  preenchimento.style.width = percentil + '%'
 }
 
-function resizeBin( salary ) {
-  let size = salary.to - salary.from
-  bin.style.width = size + '%'
+function ajustarBalde( salario ) {
+  let tamanho = salario.ate - salario.de
+  balde.style.width = tamanho + '%'
 }
 
-function clear() {
-  output.textContent = '…%'
-  fill.removeAttribute( 'style' )
-  bin.removeAttribute( 'style' )
+function limpar() {
+  saida.textContent = '…%'
+  preenchimento.removeAttribute( 'style' )
+  balde.removeAttribute( 'style' )
 }
 
-input.addEventListener( 'input', validate )
+entrada.addEventListener( 'input', validar )
