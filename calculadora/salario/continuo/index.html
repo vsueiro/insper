@@ -1,0 +1,35 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Seu salário, em escala</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app.css">
+    <!-- <link rel="stylesheet" href="minimal.css"> -->
+  </head>
+  <body>
+
+    <h1>Seu salário, em escala</h1>
+
+    <p>
+      Com um salário de R$
+      <input id="input" type="number" placeholder="1000" autofocus>
+      você ganha mais que
+      <output id="output">…%</output>
+      dos brasileiros
+    </p>
+
+    <div class="bar">
+      <div id="fill"></div>
+      <div id="bin"></div>
+    </div>
+  
+    <footer>
+      Fonte: IBGE/PNAD Contínua (2020).
+      Projeto inspirado na <a href="https://www.nexojornal.com.br/interativo/2016/01/11/O-seu-salário-diante-da-realidade-brasileira">calculadora de salário do Nexo</a>.
+    </footer>
+
+    <script src="app.js"></script>
+
+  </body>
+</html>

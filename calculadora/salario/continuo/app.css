@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700');
+
+body {
+  font-family: Inter, sans-serif;
+  line-height: 1.5;
+  color: Indigo;
+  margin: 0 auto;
+  padding: 24px;
+  font-size: 16px;
+  max-width: 600px;
+  background: GhostWhite;
+}
+
+h1 {
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+p {
+  margin: 48px 0;
+  font-size: 32px;
+}
+
+input {
+  all: unset;
+  width: 128px;
+  padding: 0 8px;
+  border-radius: 8px;
+  border: 2px solid Lavender;
+  color: DeepPink;
+  background: White;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+output {
+  font-weight: bold;
+  color: Plum;
+}
+
+.bar {
+  display: flex;
+  width: 100%;
+  height: 24px;
+  background: Lavender;
+}
+
+#fill {
+  position: relative;
+  width: 0%;
+  height: 100%;
+  background: Plum;
+  transition: width 1s;
+}
+
+#bin {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 0%;
+  height: 100%;
+  opacity: 0;
+  background: DeepPink;
+  transition: opacity 1s, width 1s;
+}
+
+#bin::before {
+  content: 'Você';
+  position: absolute;
+  top: -32px;
+  /* left: 0; */
+  /* width: 100%; */
+  text-align: center;
+  font-weight: bold;
+  color: DeepPink;
+}
+
+#bin[style] {
+  opacity: 1;
+}
+
+footer {
+  margin-top: 48px;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: DeepPink;
+}
