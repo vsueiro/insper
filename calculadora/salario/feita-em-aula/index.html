@@ -25,10 +25,13 @@
     
     <script>
 
+      // Seleciona o elemento <input>
       let entrada = document.querySelector( 'input' )
 
+      // Dispara a função validar cada vez que o usuário digitar
       entrada.addEventListener( 'input', validar )
 
+      // Define a função de validação
       function validar() {
 
         // Pega a string que foi digitada
