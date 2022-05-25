@@ -6,7 +6,7 @@
     <title>Seu salário, em escala</title>
   </head>
   <body>
-    
+
     <h1>Seu salário, em escala</h1>
 
     <p>
@@ -22,6 +22,29 @@
       Projeto inspirado na
       <a href="#">calculadora de salário do Nexo</a>.
     </footer>
+    
+    <script>
+
+      let entrada = document.querySelector( 'input' )
+
+      entrada.addEventListener( 'input', validar )
+
+      function validar() {
+
+        // Pega a string que foi digitada
+        let valor = entrada.value 
+        
+        // Força a conversão para número inteiro
+        valor = parseInt( valor )
+
+        // Se valor for maior que 0
+        if ( valor > 0 ) {
+          console.log( valor )
+        }
+
+      }
+
+    </script>
 
   </body>
 </html>
