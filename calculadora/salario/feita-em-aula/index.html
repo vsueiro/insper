@@ -23,31 +23,7 @@
       <a href="#">calculadora de salário do Nexo</a>.
     </footer>
     
-    <script>
-
-      // Seleciona o elemento <input>
-      let entrada = document.querySelector( 'input' )
-
-      // Dispara a função validar cada vez que o usuário digitar
-      entrada.addEventListener( 'input', validar )
-
-      // Define a função de validação
-      function validar() {
-
-        // Pega a string que foi digitada
-        let valor = entrada.value 
-        
-        // Força a conversão para número inteiro
-        valor = parseInt( valor )
-
-        // Se valor for maior que 0
-        if ( valor > 0 ) {
-          console.log( valor )
-        }
-
-      }
-
-    </script>
+    <script src="app.js"></script>
 
   </body>
 </html>
