@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seu salário, em escala</title>
+    <style>
+      .barra {
+        width: 600px;
+        height: 24px;
+        background: lightgray;
+        margin: 24px 0;
+      }
+      .preenchimento {
+        width: 0%;
+        height: 100%;
+        background: green;
+        transition: all 1s;
+      }
+    </style>
   </head>
   <body>
 
@@ -16,6 +30,10 @@
       <output>…%</output>
       dos brasileiros
     </p>
+
+    <div class="barra">
+      <div class="preenchimento"></div>
+    </div>
 
     <footer>
       Fonte: IBGE/PNAD Contínua (2020).

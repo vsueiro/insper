@@ -65,7 +65,8 @@ let entrada = document.querySelector( 'input' )
 // Seleciona o elemento <output>
 let saida = document.querySelector( 'output' )
 
-
+// Seleciona o elemento .preenchimento
+let preenchimento = document.querySelector( '.preenchimento' )
 
 
 // Dispara a função validar cada vez que o usuário digitar
@@ -83,7 +84,6 @@ function validar() {
   // Se valor for maior que 0
   if ( valor > 0 ) {
     calcular( valor )
-    
   }
   
   // Se não for um valor válido
@@ -118,6 +118,7 @@ function calcular( valor ) {
 function mostrar( quantil ) {
 
   saida.textContent = quantil + '%'
+  preenchimento.style.width = quantil + '%'
 
 }
 
@@ -125,5 +126,6 @@ function mostrar( quantil ) {
 function limpar() {
 
   saida.textContent = '…%'
+  preenchimento.style.width = '0%'
 
 }
