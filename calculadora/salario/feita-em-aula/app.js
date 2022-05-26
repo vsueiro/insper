@@ -1,5 +1,63 @@
 // Carregar os dados
+let salarios = [
+  {
+    "quantil": 0,
+    "limiteInferior": 0
+  },
+  {
+    "quantil": 5,
+    "limiteInferior": 146
+  },
+  {
+    "quantil": 10,
+    "limiteInferior": 252
+  },
+  {
+    "quantil": 20,
+    "limiteInferior": 396
+  },
+  {
+    "quantil": 30,
+    "limiteInferior": 527
+  },
+  {
+    "quantil": 40,
+    "limiteInferior": 673
+  },
+  {
+    "quantil": 50,
+    "limiteInferior": 836
+  },
+  {
+    "quantil": 60,
+    "limiteInferior": 1035
+  },
+  {
+    "quantil": 70,
+    "limiteInferior": 1263
+  },
+  {
+    "quantil": 80,
+    "limiteInferior": 1682
+  },
+  {
+    "quantil": 90,
+    "limiteInferior": 2646
+  },
+  {
+    "quantil": 95,
+    "limiteInferior": 4082
+  },
+  {
+    "quantil": 99,
+    "limiteInferior": 9832
+  }
+]
+
 // Inverter a ordem dos dados
+salarios.reverse()
+
+
 
 
 // Seleciona o elemento <input>
@@ -12,25 +70,35 @@ entrada.addEventListener( 'input', validar )
 function validar() {
 
   // Pega a string que foi digitada
-  let salario = entrada.value 
+  let valor = entrada.value 
   
   // Força a conversão para número inteiro
-  salario = parseInt( salario )
+  valor = parseInt( valor )
 
   // Se valor for maior que 0
-  if ( salario > 0 ) {
-    calcular( salario )
+  if ( valor > 0 ) {
+    calcular( valor )
   }
 
 }
 
 // Define função que encontra faixa salarial
-function calcular( salario ) {
+function calcular( valor ) {
 
   // Para cada faixa salarial
-    // Se salario for maior que limite inferior
+  for ( let salario of salarios ) {
+
+    // Se valor for maior que limite inferior
+    if ( valor > salario.limiteInferior ) {
+
       // Mostro a categoria atual
+      mostrar( salario )
+
       // Paro de checar
+      break
+    }
+    
+  }   
 
 }
 
