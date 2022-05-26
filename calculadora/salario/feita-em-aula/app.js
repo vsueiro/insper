@@ -59,9 +59,14 @@ salarios.reverse()
 
 
 
-
 // Seleciona o elemento <input>
 let entrada = document.querySelector( 'input' )
+
+// Seleciona o elemento <output>
+let saida = document.querySelector( 'output' )
+
+
+
 
 // Dispara a função validar cada vez que o usuário digitar
 entrada.addEventListener( 'input', validar )
@@ -78,6 +83,12 @@ function validar() {
   // Se valor for maior que 0
   if ( valor > 0 ) {
     calcular( valor )
+    
+  }
+  
+  // Se não for um valor válido
+  else {
+    limpar()
   }
 
 }
@@ -92,7 +103,8 @@ function calcular( valor ) {
     if ( valor > salario.limiteInferior ) {
 
       // Mostro a categoria atual
-      mostrar( salario )
+      let quantil = salario.quantil
+      mostrar( quantil )
 
       // Paro de checar
       break
@@ -102,6 +114,16 @@ function calcular( valor ) {
 
 }
 
-function mostrar() {
+// Define função que mostra o percentual na tela
+function mostrar( quantil ) {
+
+  saida.textContent = quantil + '%'
+
+}
+
+// Define função que remove o percentual antigo
+function limpar() {
+
+  saida.textContent = '…%'
 
 }
