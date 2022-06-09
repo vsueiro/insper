@@ -44,8 +44,13 @@ for ( let streaming of streamings ) {
   streaming.addEventListener( 'input', filtrar )
 }
 
+// Seleciona 
+let lista = document.querySelector( 'ul' )
 
 function filtrar() {
+
+  // Limpa lista de resultados
+  lista.textContent = ''
 
   // Para cada checkbox
   for ( let streaming of streamings ) {
@@ -53,11 +58,20 @@ function filtrar() {
     // Descobre se este streaming foi selecionado
     if ( streaming.checked ) {
 
+      // Para cada filme da lista de filmes
       for ( let filme of filmes ) {
 
+        // Checa se filme está disponível no streaming selecionado
         if ( streaming.value == filme.streaming ) {
-          
-          console.log( filme.nome )
+
+          // Cria um elemento `<li>`
+          let item = document.createElement( 'li' )
+
+          // Insere o nome do filme
+          item.textContent = filme.nome
+
+          // Adiciona esse item à lista de resultados
+          lista.append( item )
 
         }
 
