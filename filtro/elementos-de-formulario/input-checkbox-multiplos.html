@@ -1,0 +1,72 @@
+<meta charset="utf-8">
+
+<label>
+  <input type="checkbox" name="streaming" value="netflix"> Netflix
+</label>
+<label>
+  <input type="checkbox" name="streaming" value="disney"> Disney+
+</label>
+<label>
+  <input type="checkbox" name="streaming" value="amazon"> Amazon Prime
+</label>
+
+<ul></ul>
+
+<script>
+
+// Cria dados
+let filmes = [
+  {
+    nome : 'Poderoso Chefão',
+    streaming : 'netflix'
+  },
+  {
+    nome : 'Soul',
+    streaming : 'disney'
+  },
+  {
+    nome : '007',
+    streaming : 'amazon'
+  },
+  {
+    nome : 'Titanic',
+    streaming : 'netflix'
+  }
+]
+
+// Pega todos os checkbox da pagina
+let streamings = document.querySelectorAll( 'input[name="streaming"]' )
+
+// Para cada um deles
+for ( let streaming of streamings ) {
+
+  // Ouve o evento de clique e manda filtrar
+  streaming.addEventListener( 'input', filtrar )
+}
+
+
+function filtrar() {
+
+  // Para cada checkbox
+  for ( let streaming of streamings ) {
+
+    // Descobre se este streaming foi selecionado
+    if ( streaming.checked ) {
+
+      for ( let filme of filmes ) {
+
+        if ( streaming.value == filme.streaming ) {
+          
+          console.log( filme.nome )
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+</script>
