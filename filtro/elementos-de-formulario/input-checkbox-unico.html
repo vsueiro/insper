@@ -1,0 +1,27 @@
+<label>
+  <input type="checkbox" class="modo"> Modo escuro
+</label>
+
+<script>
+
+let input = document.querySelector( '.modo' )
+
+input.addEventListener( 'input', mostrar )
+
+function mostrar() {
+
+  if ( input.checked ) {
+    
+    document.body.style.backgroundColor = 'black'
+    document.body.style.color = 'white'
+
+  } else {
+
+    document.body.style.backgroundColor = 'white'
+    document.body.style.color = 'black'
+
+  }
+
+}
+
+</script>
