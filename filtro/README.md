@@ -13,7 +13,7 @@
 
 - Ler dados externos (arquivo JSON ou API)
     - função `fetch()`
-    - Exemplo: https://api.noepicentro.com/count
+    - Exemplo: https://nominatim.openstreetmap.org/search?q=Brasil&format=json&limit=1
 
 - Criar elementos HTML dinamicamente
     - método `document.createElement()`
