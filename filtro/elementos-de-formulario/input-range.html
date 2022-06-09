@@ -1,0 +1,20 @@
+Quantos cachorros você tem?
+<input type="range" min="0" max="5" class="cachorros" value="1">
+
+<p>Você tem <span>…</span> cachorros</p>
+
+
+<script>
+
+let cachorros = document.querySelector( '.cachorros' )
+let contador = document.querySelector( 'span' )
+
+cachorros.addEventListener( 'input', mostrar )
+
+function mostrar() {
+
+  contador.textContent = cachorros.value
+
+}
+
+</script>
