@@ -1,77 +1,106 @@
-<meta charset="utf-8">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Checkbox múltiplos</title>
+      <link rel="stylesheet" href="../filtro.css">
+</head>
+<body class="multiplos">
 
-<label>
-  <input type="checkbox" name="streaming" value="netflix"> Netflix
-</label>
-<label>
-  <input type="checkbox" name="streaming" value="disney"> Disney+
-</label>
-<label>
-  <input type="checkbox" name="streaming" value="amazon"> Amazon Prime
-</label>
+<main>
 
-<ul></ul>
+<section id="filtro">
+
+  <article id="seletores">
+    <label class="unico">
+      <input type="checkbox" name="streaming" value="netflix">
+      <img height="12" alt="Netflix logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/512px-Netflix_2015_logo.svg.png">
+    </label>
+    <label class="unico">
+      <input type="checkbox" name="streaming" value="disney">
+      <img height="20" alt="Disney+ logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Disney%2B_logo.svg/512px-Disney%2B_logo.svg.png">
+    </label>
+    <label class="unico">
+      <input type="checkbox" name="streaming" value="amazon">
+      <img height="20" alt="Amazon Prime Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Amazon_Prime_Logo.svg/64px-Amazon_Prime_Logo.svg.png">
+    </label>
+  </article>
+
+  <article id="conteudo">
+    <h4>Filmes disponíveis</h3>
+    <ul></ul>
+  </article>
+
+</section>
+
+</main>
 
 <script>
 
-// Cria dados
-let filmes = [
-  {
-    nome : 'Poderoso Chefão',
-    streaming : 'netflix'
-  },
-  {
-    nome : 'Soul',
-    streaming : 'disney'
-  },
-  {
-    nome : '007',
-    streaming : 'amazon'
-  },
-  {
-    nome : 'Titanic',
-    streaming : 'netflix'
+  // Cria dados
+  let filmes = [
+    {
+      nome: 'Poderoso Chefão',
+      streaming: 'netflix'
+    },
+    {
+      nome: 'Soul',
+      streaming: 'disney'
+    },
+    {
+      nome: '007',
+      streaming: 'amazon'
+    },
+    {
+      nome: 'Titanic',
+      streaming: 'netflix'
+    }
+  ]
+
+  // Pega todos os checkbox da pagina
+  let streamings = document.querySelectorAll('input[name="streaming"]')
+
+  // Para cada um deles
+  for (let streaming of streamings) {
+
+    // Ouve o evento de clique e manda filtrar
+    streaming.addEventListener('input', filtrar)
   }
-]
 
-// Pega todos os checkbox da pagina
-let streamings = document.querySelectorAll( 'input[name="streaming"]' )
+  // Seleciona 
+  let lista = document.querySelector('ul')
 
-// Para cada um deles
-for ( let streaming of streamings ) {
+  function filtrar() {
 
-  // Ouve o evento de clique e manda filtrar
-  streaming.addEventListener( 'input', filtrar )
-}
+    // Limpa lista de resultados
+    lista.textContent = ''
 
-// Seleciona 
-let lista = document.querySelector( 'ul' )
+    // Para cada checkbox
+    for (let streaming of streamings) {
 
-function filtrar() {
+      // Descobre se este streaming foi selecionado
+      if (streaming.checked) {
 
-  // Limpa lista de resultados
-  lista.textContent = ''
+        // Para cada filme da lista de filmes
+        for (let filme of filmes) {
 
-  // Para cada checkbox
-  for ( let streaming of streamings ) {
+          // Checa se filme está disponível no streaming selecionado
+          if (streaming.value == filme.streaming) {
 
-    // Descobre se este streaming foi selecionado
-    if ( streaming.checked ) {
+            // Cria um elemento `<li>`
+            let item = document.createElement('li')
 
-      // Para cada filme da lista de filmes
-      for ( let filme of filmes ) {
+            // Insere o nome do filme
+            item.textContent = filme.nome
 
-        // Checa se filme está disponível no streaming selecionado
-        if ( streaming.value == filme.streaming ) {
+            // Adiciona esse item à lista de resultados
+            lista.append(item)
 
-          // Cria um elemento `<li>`
-          let item = document.createElement( 'li' )
-
-          // Insere o nome do filme
-          item.textContent = filme.nome
-
-          // Adiciona esse item à lista de resultados
-          lista.append( item )
+            //adiciona a classe que faz o efeito de aparecer
+            item.className = "aparecer"
+          
+          }
 
         }
 
@@ -81,6 +110,7 @@ function filtrar() {
 
   }
 
-}
-
 </script>
+
+</body>
+</html>

@@ -1,5 +1,16 @@
-Seu nome:
-<input type="text" class="idade">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Checkbox number</title>
+      <link rel="stylesheet" href="../filtro.css">
+</head>
+<body class="number">
+
+Insira idade e veja no console.log. Limite numérico de 2 caracteres.
+
+<input class="idade" pattern="[0-9]{4}" minlength="2" maxlength="2" inputmode="numeric" type="text" title="Insira 2 digitos" autofocus>
 
 <script>
 
@@ -14,3 +25,5 @@ function filtrar() {
 }
 
 </script>
+</body>
+</html>
