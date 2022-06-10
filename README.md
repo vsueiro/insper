@@ -6,7 +6,7 @@ Exemplos de código feito pelos professores. Fiz só uma contribuição no CSS d
 
 - [Checkbox único](https://github.todearaujo.com/repoprofs/filtro/input/checkbox/unico)
 
-- [Checkbox múltiplo](https://github.todearaujo.com/repoprofs/filtro/input/checkbox/multiplos)
+- [Checkbox múltiplo](https://github.todearaujo.com/repoprofs/filtro/input/checkbox/multiplo)
 
 - [Número](https://github.todearaujo.com/repoprofs/filtro/input/number)
 
