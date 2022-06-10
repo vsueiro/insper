@@ -6,5 +6,5 @@ Exemplos de código feito pelos professores. Fiz só uma contribuição no CSS d
 [Checkbox único](https://github.todearaujo.com/repoprofs/input/checkbox/unico)
 [Checkbox múltiplo](https://github.todearaujo.com/repoprofs/input/checkbox/multiplos)
 [Número](https://github.todearaujo.com/repoprofs/input/number)
-[Intervalo]((https://github.todearaujo.com/repoprofs/input/range)
-[Texto]((https://github.todearaujo.com/repoprofs/input/text)
+[Intervalo](https://github.todearaujo.com/repoprofs/input/range)
+[Texto](https://github.todearaujo.com/repoprofs/input/text)
