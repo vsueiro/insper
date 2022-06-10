@@ -4,13 +4,13 @@ Exemplos de código feito pelos professores. Fiz só uma contribuição no CSS d
 
 ## Inputs
 
-- [Checkbox único](https://github.todearaujo.com/repoprofs/input/checkbox/unico)
+- [Checkbox único](https://github.todearaujo.com/repoprofs/filtro/input/checkbox/unico)
 
-- [Checkbox múltiplo](https://github.todearaujo.com/repoprofs/input/checkbox/multiplos)
+- [Checkbox múltiplo](https://github.todearaujo.com/repoprofs/filtro/input/checkbox/multiplos)
 
-- [Número](https://github.todearaujo.com/repoprofs/input/number)
+- [Número](https://github.todearaujo.com/repoprofs/filtro/input/number)
 
-- [Intervalo](https://github.todearaujo.com/repoprofs/input/range)
+- [Intervalo](https://github.todearaujo.com/repoprofs/filtro/input/range)
 
-- [Texto](https://github.todearaujo.com/repoprofs/input/text)
+- [Texto](https://github.todearaujo.com/repoprofs/filtro/input/text)
 
