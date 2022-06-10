@@ -1,5 +1,3 @@
-# insper
+# repoprofs
 
-Here you’ll find the examples of interactive mini-projects that I live-coded during class (or provided as a recording afterwards).
-
-Even though their are minimal, they should provide a starting point for students to create their own interactive web stories.
+Exemplos de código feito pelos professores. Fiz só uma contribuição no CSS dos exemplos depois da aula do formato de exploração para demostrar as possibilidades a quem interessar.
