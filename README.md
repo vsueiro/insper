@@ -1,16 +1,17 @@
-# repoprofs
+# insper by [@vsueiro](https://github.todearaujo.com/vsueiro/insper)
 
-Exemplos de código feito pelos professores. Fiz só uma contribuição no CSS dos exemplos depois da aula do formato de exploração para demostrar as possibilidades a quem interessar.
+Here you’ll find the examples of interactive mini-projects that I live-coded during class (or provided as a recording afterwards).
 
-## Inputs
+Even though their are minimal, they should provide a starting point for students to create their own interactive web stories.
 
-- [Checkbox único](https://github.todearaujo.com/repoprofs/filtro/input/checkbox/unico)
+## CSS for input types by [@todearaujo](https://github.todearaujo.com/repoprofs/)
 
-- [Checkbox múltiplo](https://github.todearaujo.com/repoprofs/filtro/input/checkbox/multiplo)
+- Checkbox único > [Webview](https://github.todearaujo.com/repoprofs/filtro/input/checkbox/unico)
 
-- [Número](https://github.todearaujo.com/repoprofs/filtro/input/number)
+- Checkbox múltiplo > [Webview](https://github.todearaujo.com/repoprofs/filtro/input/checkbox/multiplo)
 
-- [Intervalo](https://github.todearaujo.com/repoprofs/filtro/input/range)
+- Número > [Webview](https://github.todearaujo.com/repoprofs/filtro/input/number)
 
-- [Texto](https://github.todearaujo.com/repoprofs/filtro/input/text)
+- Intervalo > [Webview](https://github.todearaujo.com/repoprofs/filtro/input/range)
 
+- Texto > [Webview](https://github.todearaujo.com/repoprofs/filtro/input/text)
