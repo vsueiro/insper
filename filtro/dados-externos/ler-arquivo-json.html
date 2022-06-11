@@ -1,0 +1,48 @@
+Selecione um estado:
+<select onchange="validar()">
+  <option></option>
+  <option>sp</option>
+  <option>rj</option>
+</select>
+
+<p id="resultado"></p>
+
+<script>
+
+// Função que é disparada quando a pessoa muda o seletor de estado
+function validar() {
+
+  limpar()
+
+  // Identifica qual foi a opção escolhida pela pessoa
+  let estado = event.target.value
+  
+  // Checa se ela é um texto válido (não um texto vazio)
+  if ( estado ) {
+
+    // Monta o caminho do arquivo json
+    let url = estado + '.json'
+
+    // Manda buscar o arquivo, interpretar como JSON e mostrar
+    fetch( url )
+      .then( resposta => resposta.json() )
+      .then( dados => mostrar( dados ) )
+
+  }
+
+}
+
+function limpar() {
+  // Remove o conteúdo o parágrado que mostra resultado
+  resultado.textContent = ''
+}
+
+function mostrar( dados ) {
+  // Monta texto com os dados recém-carregados
+  let texto = dados.nome + ' tem ' + dados.pop
+
+  // Coloca o texto na página
+  resultado.textContent = texto
+}
+
+</script>

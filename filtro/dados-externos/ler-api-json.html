@@ -1,0 +1,18 @@
+<script>
+
+// Define url da API (neste caso, ela já está com os parâmetros)
+let url = 'https://nominatim.openstreetmap.org/search?q=Brasil&format=json&limit=1'
+
+// Manda buscar, interpretar como JSON e mostrar
+fetch( url )
+  .then( resposta => resposta.json() )
+  .then( dados => mostrar( dados ) )
+
+function mostrar( dados ) {
+  
+  // Adicione seu código aqui
+  console.log( dados )
+
+}
+
+</script>
