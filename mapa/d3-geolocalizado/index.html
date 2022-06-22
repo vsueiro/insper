@@ -50,22 +50,26 @@
             width: 100%;
         }
         svg .uf{
-            fill: rgb(255, 255, 255);
+            fill: rgba(255, 255, 255, 1);
             fill-opacity: 0.5;
             cursor: pointer;
             stroke: rgba(87, 152, 159, 0.3);
             stroke-width: 1;
         }
         svg .uf.ativo {
-            fill: rgba(255, 255, 255, 0.7);
-            fill-opacity: 1;
+            fill: rgba(255, 255, 255, 1);
+            fill-opacity: 0.7;
         }
         svg .destaque{
             fill: rgba(103, 61, 118,0.8);
-            fill-opacity: 0.7;
+            fill-opacity: 0.5;
             stroke: rgba(103, 61, 118,0.1);
-            stroke-width: 3;
-            pointer-events: none;
+            stroke-width: 2;
+            /* pointer-events: none; */
+        }
+        svg .destaque:hover{
+            stroke: rgba(255, 255, 255, 0.5);
+            stroke-width: 2;
         }
     </style>
 </head>
