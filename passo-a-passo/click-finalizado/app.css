@@ -97,3 +97,9 @@ ul.botoes button:hover{
   align-self: center;
   margin: auto;
 }
+
+.passos p{
+  height: 400px;
+  overflow: hidden;
+  margin: 50px;
+}

@@ -1,4 +1,28 @@
 // Define lista de objetos, um para cada região
+
+let faixas = [
+  [18,30],//0
+  [31,40]//1
+];
+
+for(let deputado of deputados){
+  let dataStr = deputado.aniversario;
+  let dataSplit = dataStr.split('/'); // [31,10,1980]
+  let aniversario = dataSplit[2];
+  let hoje = 2022;//
+  let idade = hoje - aniversario;
+}
+
+
+
+
+
+
+
+
+
+
+
 let dados = [
   {
     "regiao": "Todo o Brasil",

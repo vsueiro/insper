@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body{
+            width: 100%;
+            height: 100%;
+            margin:0;
+            background: rgba(150, 87, 180, 1);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        *{
+            box-sizing: border-box;
+        }
+        #muni{
+            width: 90%;
+            height: 100px;
+            margin: 0 auto;
+            line-height: 100px;
+            font-size: 32px;
+            font-weight: bold;
+            text-align: center;
+            color: #FFF;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #mapa-conteudo {
+            margin: 0 auto;
+            width: 90%;
+            height: calc(90% - 100px);
+            background: rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: scroll;
+            padding: 30px;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+        }
+        svg{
+            height: 100%;
+            width: 100%;
+        }
+        svg path{
+            fill: rgb(255, 255, 255);
+            cursor: pointer;
+            stroke: rgba(103, 61, 118,0.5);
+            stroke-width: 40;
+        }
+        svg path.ativo {
+            fill: rgba(250, 208, 101, 1);
+            fill-opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="muni">
+        <div id="muni-titulo">Selecione um município</div>
+        <div id="muni-valor"></div>
+    </div>
+    <div id="mapa-conteudo">
+        
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
