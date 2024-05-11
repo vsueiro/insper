@@ -1,3 +1,52 @@
+/* Calcula largura ignorando padding etc */
+* {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
   background: pink;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - 320px);
+  height: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+header nav {
+  display: flex;
+  gap: 8px;
+}
+
+main {
+  background: lightblue;
+  width: calc(100% - 320px);
+  margin-left: 320px;
+  margin-top: 55px;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 320px;
+  background: darkgray;
 }
