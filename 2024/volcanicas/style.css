@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: "League Spartan", sans-serif;
 }
 
 a {
@@ -18,7 +18,8 @@ a:hover {
 }
 
 header {
-  background: pink;
+  background: white;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
   position: fixed;
   top: 0;
   right: 0;
@@ -35,11 +36,29 @@ header nav {
   gap: 8px;
 }
 
+header nav a {
+  white-space: nowrap;
+}
+
 main {
   background: lightblue;
   width: calc(100% - 320px);
   margin-left: 320px;
   margin-top: 55px;
+}
+
+form {
+  height: 55px;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  height: 32px;
+  border-radius: 16px;
+  border: 1px solid black;
+  padding: 0 16px;
 }
 
 aside {
@@ -48,5 +67,33 @@ aside {
   left: 0;
   bottom: 0;
   width: 320px;
-  background: darkgray;
+  background: lightgray;
+  padding: 0 40px;
+}
+
+aside nav {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-transform: uppercase;
+  padding: 40px 0;
+}
+
+aside nav div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.menu-editorias {
+  font-weight: bold;
+}
+
+.menu-tags a {
+  align-self: start;
+  background: rgb(240, 141, 240);
+  padding: 4px 12px;
+  border-radius: 24px 4px 4px 4px;
+  border: 1px solid black;
+  white-space: nowrap;
 }
