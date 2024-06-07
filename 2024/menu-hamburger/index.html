@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <style>
+      body {
+        background: linear-gradient(Indigo, Tomato);
+        font-family: sans-serif;
+        height: 300vh;
+        margin: 0;
+      }
+      nav {
+        background: Lavender;
+        width: 240px;
+        padding: 12px;
+        border-radius: 12px;
+        position: fixed;
+        top: 24px;
+        left: 24px;
+        clip-path: circle(36px at 48px 48px);
+        transition: all 0.8s;
+      }
+      nav.active {
+        clip-path: circle(360px at 48px 48px);
+      }
+      nav a {
+        text-decoration: none;
+        font-size: 48px;
+      }
+      nav a:hover {
+        color: DeepPink;
+      }
+      button {
+        all: unset;
+        background: HotPink;
+        border-radius: 100%;
+      }
+      button:hover {
+        background: DeepPink;
+        cursor: pointer;
+      }
+      button img {
+        width: 48px;
+        aspect-ratio: 1;
+        padding: 12px;
+      }
+      .links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin: 24px 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="nav">
+      <button id="burger">
+        <img src="burger.png" alt="Menu" />
+      </button>
+      <div class="links">
+        <a href>About</a>
+        <a href>Work</a>
+        <a href>Contact</a>
+      </div>
+    </nav>
+    <script>
+      function toggleMenu() {
+        nav.classList.toggle("active");
+      }
+
+      burger.onclick = toggleMenu;
+    </script>
+  </body>
+</html>
