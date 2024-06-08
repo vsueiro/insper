@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        font-family: sans-serif;
+        background: Indigo;
+        color: Lavender;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      @media (max-width: 1024px) {
+        body {
+          background: HotPink;
+        }
+      }
+
+      @media (max-width: 640px) {
+        body {
+          background: Coral;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="texto">… px</h1>
+
+    <script>
+      // texto.textContent = window.innerWidth + "px";
+    </script>
+  </body>
+</html>

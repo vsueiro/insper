@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries (Preferences)</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        background: Lavender;
+        color: RebeccaPurple;
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: RebeccaPurple;
+          color: Lavender;
+        }
+      }
+
+      @keyframes girar {
+        from {
+          rotate: 0deg;
+        }
+        to {
+          rotate: 360deg;
+        }
+      }
+
+      h1 {
+        animation: girar 1s infinite;
+      }
+
+      @media (prefers-reduced-motion) {
+        h1 {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Light or Dark?</h1>
+  </body>
+</html>
