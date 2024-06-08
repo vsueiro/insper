@@ -20,9 +20,9 @@
         top: 24px;
         left: 24px;
         clip-path: circle(36px at 48px 48px);
-        transition: all 0.8s;
+        transition: all 1s;
       }
-      nav.active {
+      nav.ativa {
         clip-path: circle(360px at 48px 48px);
       }
       nav a {
@@ -55,8 +55,8 @@
     </style>
   </head>
   <body>
-    <nav id="nav">
-      <button id="burger">
+    <nav id="navegacao" class="">
+      <button id="lanche">
         <img src="burger.png" alt="Menu" />
       </button>
       <div class="links">
@@ -65,12 +65,13 @@
         <a href>Contact</a>
       </div>
     </nav>
+
     <script>
       function toggleMenu() {
-        nav.classList.toggle("active");
+        navegacao.classList.toggle("ativa");
       }
 
-      burger.onclick = toggleMenu;
+      lanche.onclick = toggleMenu;
     </script>
   </body>
 </html>
