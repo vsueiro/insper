@@ -37,7 +37,17 @@
     <h1 id="texto">… px</h1>
 
     <script>
-      // texto.textContent = window.innerWidth + "px";
+      // Define função
+      function mostraLargura() {
+        // Troca o texto do h1#texto
+        texto.textContent = window.innerWidth + "px";
+      }
+
+      // Chama a função quando a página carrega
+      window.onload = mostraLargura;
+
+      // Chama a função quando a página é redimensionada
+      window.onresize = mostraLargura;
     </script>
   </body>
 </html>
