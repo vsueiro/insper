@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Idade Canina</title>
+  </head>
+  <body>
+    <h1>Calculadora de Idade Canina</h1>
+
+    <p>
+      <input id="inputCanino" placeholder="1, 2, 3…" type="number" />
+      anos de cachorro são
+      <output id="outputHumano">…</output>
+      anos de gente.
+    </p>
+
+    <script>
+      // Define função para calcular idade
+      function calcularIdade() {
+        let idadeCanina = inputCanino.value;
+        let idadeHumana = idadeCanina * 7;
+
+        outputHumano.textContent = idadeHumana;
+      }
+
+      // Sempre que o input mudar
+      inputCanino.oninput = calcularIdade;
+    </script>
+  </body>
+</html>
