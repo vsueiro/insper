@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contador de Cliques com Coração</title>
+    <style>
+      button {
+        font-size: 16px;
+        padding: 10px 20px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="increment(this)">0 ❤️</button>
+    <button onclick="increment(this)">0 ❤️</button>
+
+    <script>
+      function increment(button) {
+        var currentCount = parseInt(button.textContent);
+        button.textContent = currentCount + 1 + " ❤️";
+      }
+    </script>
+  </body>
+</html>
