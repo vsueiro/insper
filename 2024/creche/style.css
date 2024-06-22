@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap");
+
+body {
+  background: Lavender;
+  font-family: Sniglet, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  color: RebeccaPurple;
+  font-size: 48px;
+  line-height: 1;
+}
+
+h1 span {
+  color: DeepPink;
+}
+
+#creche {
+  font-size: 36px;
+  max-width: 360px;
+  margin: 0 auto;
+  user-select: none;
+}
+
+#creche span:hover {
+  background: white;
+  cursor: pointer;
+}
