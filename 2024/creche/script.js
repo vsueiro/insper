@@ -18,15 +18,16 @@ function desenharGrafico(dados) {
   for (let item of dados) {
     // Pega emoji
     let emoji = "<span>" + item.emoji + "</span>";
+    let atual = item.categoria;
 
     // Se mudou a categoria
-    if (anterior && anterior !== item.categoria) {
+    if (anterior !== atual) {
       // Adiciona quebra de linha
       emoji = "<br><br>" + emoji;
     }
 
     // Atualiza valor da categoria anterior
-    anterior = item.categoria;
+    anterior = atual;
 
     // Bote o emoji no parágrafo
     creche.innerHTML += emoji;
