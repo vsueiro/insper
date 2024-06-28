@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botão Fujão</title>
+    <style>
+      button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
+        transition: all 0.1s;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="botao" onmouseover="fugir()">Clique aqui</button>
+
+    <script>
+      function fugir() {
+        // Falta gerar e usar números aleatórios pro top e left
+        botao.style.top = "10%";
+        botao.style.left = "20%";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Progresso</title>
+    <style>
+      button {
+        width: 32px;
+        height: 32px;
+        background: rgb(255, 177, 75);
+        border: none;
+      }
+
+      #player {
+        display: flex;
+      }
+
+      #barra {
+        width: 100px;
+        background: lightgray;
+      }
+
+      #progresso {
+        width: 0%;
+        background: green;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="player">
+      <button id="play">▶️</button>
+      <div id="barra">
+        <div id="progresso"></div>
+      </div>
+      <button id="download">↓</button>
+    </div>
+
+    <script>
+      let valor = 0;
+      setInterval(function () {
+        progresso.style.width = valor + "%";
+
+        valor = valor + 1;
+      }, 1000);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jardim</title>
+    <style>
+      .buracos {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .buraco {
+        width: 48px;
+        height: 48px;
+        border: 1px solid black;
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="buracos">
+      <div class="buraco" onclick="plantar(this)">~</div>
+      <div class="buraco" onclick="plantar(this)">~</div>
+      <div class="buraco" onclick="plantar(this)">~</div>
+    </div>
+
+    <script>
+      const plantas = ["🪴", "🌿", "🌸"];
+
+      function plantar(buraco) {
+        const indiceAleatorio = Math.floor(Math.random() * plantas.length);
+        const planta = plantas[indiceAleatorio];
+        buraco.textContent = planta;
+      }
+    </script>
+  </body>
+</html>
