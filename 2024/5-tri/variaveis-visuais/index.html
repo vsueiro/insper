@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variáveis Visuais</title>
+    <style>
+      .marca {
+        width: 1px;
+        height: 100px;
+        background: red;
+        color: white;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        border-radius: 50px;
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="grafico"></div>
+
+    <script type="module">
+      import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+
+      async function carregar() {
+        const taxas = await d3.csv("taxas.csv", d3.autoType);
+
+        desenhar(taxas);
+      }
+
+      function desenhar(taxas) {
+        for (let taxa of taxas) {
+          let div = `
+            <div
+              class="marca"
+              style="width:${taxa.valor * 100}px">
+              ${taxa.pais}:
+              ${taxa.valor}
+              ${taxa.valor === 1 ? "filho" : "filhos"}
+            </div>`;
+          grafico.innerHTML += div;
+        }
+      }
+
+      carregar();
+    </script>
+  </body>
+</html>
