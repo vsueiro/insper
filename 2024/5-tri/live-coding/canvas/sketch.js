@@ -26,7 +26,7 @@ function setup() {
   noStroke();
   fill("#aac6ca");
 
-  for (let i = 0; i < 20000; i++) {
+  for (let i = 0; i < 400; i++) {
     let bolinha = new Bolinha();
     bolinhas.push(bolinha);
   }
