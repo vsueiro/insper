@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seu salário, em escala</title>
+    <style>
+      #grafico {
+        height: 20px;
+        width: 400px;
+        background: lightgray;
+        margin: 20px 0;
+      }
+
+      #barra {
+        background: green;
+        height: 100%;
+        width: 0;
+        transition: all;
+      }
+    </style>
+    <script type="module" src="script-simplificado.js"></script>
+  </head>
+  <body>
+    <h1>Seu salário, em escala</h1>
+    <p>
+      Com um salário de R$
+      <input id="input" type="number" />
+      você ganha mais que
+      <output id="output">…</output>% da população brasileira
+    </p>
+
+    <div id="grafico">
+      <div id="barra"></div>
+    </div>
+
+    <footer>
+      <small>
+        Fonte:
+        <a href="https://sidra.ibge.gov.br/tabela/7536"
+          >IBGE/PNAD Contínua (2023)</a
+        >. Projeto inspirado na
+        <a
+          href="https://www.nexojornal.com.br/interativo/2016/01/11/o-seu-salario-diante-da-realidade-brasileira"
+          >calculadora de salário do Nexo.</a
+        >
+      </small>
+    </footer>
+  </body>
+</html>
