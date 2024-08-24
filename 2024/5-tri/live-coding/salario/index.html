@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seu salário, em escala</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Seu salário, em escala</h1>
+
+      <p>
+        Com um salário de R$
+        <input id="entrada" type="number" />
+        você ganha mais que
+        <output id="saida">…</output>
+        da população brasileira
+      </p>
+
+      <div id="grafico">
+        <div id="barra"></div>
+      </div>
+
+      <footer>
+        <small>
+          Fonte: IBGE/PNAD Contínua (2023). Inspirado na calculadora de salário
+          do Nexo
+        </small>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+  background: lavender;
+  color: indigo;
+}
+
+h1 {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+h1 + p {
+  font-size: 24px;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  width: 4em;
+  color: inherit;
+}
+
+output {
+  color: deeppink;
+}
+
+#app {
+  max-width: 512px;
+  margin: 48px auto;
+}
+
+#grafico {
+  background: plum;
+  height: 24px;
+  max-width: 600px;
+  margin: 24px 0;
+}
+
+#barra {
+  background: deeppink;
+  width: 0;
+  height: 100%;
+  transition: all 0.4s;
+}
