@@ -3,20 +3,15 @@
 }
 
 body {
-  background: Indigo;
-  color: Lavender;
+  background: Lavender;
+  color: Indigo;
   font-family: sans-serif;
   margin: 0;
 }
 
-.steps {
-  margin: 0 auto;
-  max-width: 600px;
-  position: relative;
-}
-
 .sticky {
   align-items: center;
+  background: Indigo;
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -24,10 +19,11 @@ body {
   top: 0;
 }
 
-.sticky img {
-  display: block;
+.steps {
+  color: Lavender;
+  margin: 0 auto;
   max-width: 600px;
-  width: 100%;
+  position: relative;
 }
 
 .step {
@@ -46,33 +42,33 @@ body {
 
 p {
   font-size: 18px;
-  margin-inline: auto;
   margin-block: 48px;
+  margin-inline: auto;
   max-width: 600px;
   width: calc(100% - 48px);
 }
 
 .fantasma {
-  width: 96px;
-  aspect-ratio: 2/3;
-  border-radius: 48px 48px 0 0;
-  background: linear-gradient(GhostWhite, Transparent);
-  display: flex;
   align-items: start;
-  justify-content: center;
+  aspect-ratio: 2/3;
+  background: linear-gradient(GhostWhite, Transparent);
+  border-radius: 48px 48px 0 0;
+  display: flex;
   gap: 8px;
-  top: 50%;
+  justify-content: center;
   left: 50%;
-  translate: -50% -50%;
-  scale: 1;
   position: absolute;
+  scale: 1;
+  top: 50%;
   transition: all 1s;
+  translate: -50% -50%;
+  width: 96px;
 }
 
 .olho {
-  width: 16px;
   aspect-ratio: 1;
   background: Indigo;
   border-radius: 50%;
   margin-top: 48px;
+  width: 16px;
 }
