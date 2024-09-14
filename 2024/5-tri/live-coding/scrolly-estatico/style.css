@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: Indigo;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.steps {
+  margin: 0 auto;
+  max-width: 600px;
+  position: relative;
+}
+
+.sticky {
+  align-items: center;
+  background: Lavender;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+}
+
+.sticky img {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+}
+
+.step {
+  font-size: 24px;
+  height: 100vh;
+  padding: 0 32px;
+}
+
+.content {
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  width: fit-content;
+}
+
+p {
+  font-size: 18px;
+  margin-inline: auto;
+  margin-block: 48px;
+  max-width: 600px;
+  width: calc(100% - 48px);
+}
