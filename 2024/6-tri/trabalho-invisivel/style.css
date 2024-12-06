@@ -13,9 +13,25 @@ body {
 }
 
 #jogo {
-  height: 75vh;
+  position: relative;
+  height: 640px;
+  max-width: 1280px;
   background: #fff;
   border-radius: 16px;
   border: 1px solid #ccc;
-  margin-block: 48px;
+  margin: 48px auto;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  translate: -50%;
+  z-index: 1;
+}
+
+.etapa {
+  position: relative;
+  z-index: 2;
 }
