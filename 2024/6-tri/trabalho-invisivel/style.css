@@ -3,8 +3,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
   background: #eee;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -13,25 +13,32 @@ body {
 }
 
 #jogo {
-  position: relative;
-  height: 640px;
-  max-width: 1280px;
   background: #fff;
-  border-radius: 16px;
   border: 1px solid #ccc;
+  border-radius: 16px;
+  height: 640px;
   margin: 48px auto;
+  max-width: 1280px;
   overflow: hidden;
+  position: relative;
 }
 
 canvas {
+  left: 50%;
   position: absolute;
   top: 0;
-  left: 50%;
   translate: -50%;
   z-index: 1;
 }
 
 .etapa {
+  pointer-events: none;
   position: relative;
+  padding: 48px;
   z-index: 2;
+}
+
+.etapa button,
+.etapa input {
+  pointer-events: all;
 }

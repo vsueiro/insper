@@ -1,3 +1,5 @@
+// Quiz
+
 const jogo = document.querySelector("#jogo");
 const elementos = document.querySelectorAll(".etapa");
 const forms = document.querySelectorAll("form");
@@ -49,17 +51,23 @@ mostrarEtapa();
 
 // Matter
 
-// module aliases
-const Engine = Matter.Engine,
-  Render = Matter.Render,
-  Runner = Matter.Runner,
-  Bodies = Matter.Bodies,
-  Composite = Matter.Composite;
+// Extrai módulos
+const {
+  Engine,
+  Render,
+  Runner,
+  Bodies,
+  MouseConstraint,
+  Mouse,
+  Events,
+  World,
+  Composite,
+} = Matter;
 
-// create an engine
+// Cria engine
 const engine = Engine.create();
 
-// create a renderer
+// Cria renderer
 const render = Render.create({
   element: jogo,
   engine: engine,
@@ -71,19 +79,76 @@ const render = Render.create({
   },
 });
 
-// create two boxes and a ground
-const boxA = Bodies.rectangle(400, 200, 80, 80);
-const boxB = Bodies.rectangle(450, 50, 80, 80);
-const ground = Bodies.rectangle(400, 610, 810, 60, { isStatic: true });
-
-// add all of the bodies to the world
-Composite.add(engine.world, [boxA, boxB, ground]);
-
-// run the renderer
+// Inicia renderer
 Render.run(render);
 
-// create runner
+// Cria runner
 const runner = Runner.create();
 
-// run the engine
+// Inicia runner
 Runner.run(runner, engine);
+
+// Cria chão
+const chao = Bodies.rectangle(640, 640 + 64, 1280, 128, { isStatic: true });
+
+// Adiciona chão ao mundo
+Composite.add(engine.world, [chao]);
+
+// Adiciona controles de mouse
+const mouse = Mouse.create(render.canvas),
+  mouseConstraint = MouseConstraint.create(engine, {
+    mouse: mouse,
+    constraint: {
+      stiffness: 0.2,
+      render: {
+        visible: false,
+      },
+    },
+  });
+
+Composite.add(engine.world, mouseConstraint);
+
+// Sincroniza mouse com rendering
+render.mouse = mouse;
+
+// Define emojis possíveis
+const emojis = ["🧹", "🧦", "🍕", "🩳"];
+
+// Retorna textura de emoji aleatório
+function emojiAleatorio() {
+  const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+  return `https://emojicdn.elk.sh/${emoji}?style=google`;
+}
+
+// Faz um único emoji cair
+function cairEmoji() {
+  const raio = 80 * 0.75;
+  const x = Math.random() * 1280;
+  const y = raio * -1;
+  const angulo = Math.random() * 2 * Math.PI;
+
+  const circulo = Bodies.circle(x, y, raio, {
+    angle: angulo,
+    render: {
+      sprite: {
+        xScale: 1,
+        yScale: 1,
+        texture: emojiAleatorio(),
+      },
+    },
+  });
+
+  // Adiciona emoji ao mundo
+  Composite.add(engine.world, [circulo]);
+}
+
+// Cria um emoji a cada 1 segundo
+setInterval(cairEmoji, 1000);
+
+// Quando clica no mundo
+Events.on(mouseConstraint, "mousedown", () => {
+  // Remove o corpo clicado
+  if (mouseConstraint.body) {
+    World.remove(engine.world, mouseConstraint.body);
+  }
+});
