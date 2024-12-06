@@ -33,7 +33,34 @@
       >
     </p>
 
-    <section id="jogo"></section>
+    <section id="jogo">
+      <div class="etapa pergunta">
+        <h2>
+          Homens e mulheres gastam o mesmo tempo cuidando das tarefas da casa?
+        </h2>
+        <form data-resposta="sim">
+          <button name="resposta" value="sim">Sim</button>
+          <button name="resposta" value="nao">Não</button>
+        </form>
+      </div>
+
+      <div class="etapa pergunta">
+        <h2>Quem trabalha mais dentro de casa, os homens ou as mulheres?</h2>
+        <form data-resposta="mulheres">
+          <button name="resposta" value="mulheres">Mulheres</button>
+          <button name="resposta" value="homens">Homens</button>
+        </form>
+      </div>
+
+      <div class="etapa pergunta">
+        <h2>Em média, quantas horas mulheres trabalham a mais que homens?</h2>
+        <form data-resposta="10">
+          <input type="range" min="0" max="10" step="1" name="resposta" />
+          <p>5h</p>
+          <button>Responder</button>
+        </form>
+      </div>
+    </section>
 
     <footer>
       <p>Referências</p>
