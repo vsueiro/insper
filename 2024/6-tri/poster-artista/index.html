@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poster Artista</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.1/p5.js"></script>
+  </head>
+  <body>
+    <!-- Form -->
+    <form onsubmit="gerarPoster(); return false;">
+      <input id="albumInput" placeholder="Nome do álbum" />
+      <button>Gerar Poster</button>
+    </form>
+
+    <!-- Canvas -->
+    <div id="poster-container"></div>
+
+    <!-- Controls -->
+    <button id="download" onclick="save(canvas, 'poster.png');">Baixar</button>
+
+    <script>
+      let canvas;
+      let currentAlbum;
+
+      const albums = [
+        {
+          name: "Aboios e Vaquejada",
+          color: "#c0ff33",
+        },
+        {
+          name: "A Morte do Vaqueiro",
+          color: "#ff00ff",
+        },
+      ];
+
+      function setup() {
+        canvas = createCanvas(300, 400);
+        canvas.parent("poster-container");
+      }
+
+      function draw() {
+        if (!currentAlbum) {
+          background("gray");
+          return;
+        }
+
+        // Pintar canvas com a cor do album
+        background(currentAlbum.color);
+      }
+
+      function gerarPoster() {
+        const match = albums.find((album) => album.name === albumInput.value);
+
+        if (!match) {
+          alert("Álbum não encontrado");
+          return;
+        }
+
+        currentAlbum = match;
+      }
+    </script>
+  </body>
+</html>

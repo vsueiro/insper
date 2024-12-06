@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Termômetro</title>
+    <style>
+      :root {
+        --termometro: red;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      #impactos {
+        display: flex;
+        gap: 16px;
+
+        p {
+          border: 1px solid gray;
+          padding: 16px;
+          width: calc(100% - 32px);
+        }
+      }
+
+      #humano::before,
+      #ambiente::before {
+        content: "Impacto Humano";
+        display: block;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 75%;
+        margin-bottom: 1em;
+      }
+
+      #ambiente::before {
+        content: "Impacto Ambiental";
+      }
+
+      /********** Range Input Styles **********/
+      /*Range Reset*/
+      input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        background: transparent;
+        cursor: pointer;
+        width: 15rem;
+      }
+
+      /* Removes default focus */
+      input[type="range"]:focus {
+        outline: none;
+      }
+
+      /***** Chrome, Safari, Opera and Edge Chromium styles *****/
+      /* slider track */
+      input[type="range"]::-webkit-slider-runnable-track {
+        background-color: var(--termometro);
+        border-radius: 0.5rem;
+        height: 0.5rem;
+      }
+
+      /* slider thumb */
+      input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none; /* Override default look */
+        appearance: none;
+        margin-top: -12px; /* Centers thumb on the track */
+
+        /*custom styles*/
+        background-color: #5cd5eb;
+        height: 2rem;
+        width: 1rem;
+      }
+
+      input[type="range"]:focus::-webkit-slider-thumb {
+        border: 1px solid var(--termometro);
+        outline: 3px solid var(--termometro);
+        outline-offset: 0.125rem;
+      }
+
+      /******** Firefox styles ********/
+      /* slider track */
+      input[type="range"]::-moz-range-track {
+        background-color: var(--termometro);
+        border-radius: 0.5rem;
+        height: 0.5rem;
+      }
+
+      /* slider thumb */
+      input[type="range"]::-moz-range-thumb {
+        border: none; /*Removes extra border that FF applies*/
+        border-radius: 0; /*Removes default border-radius that FF applies*/
+
+        /*custom styles*/
+        background-color: #5cd5eb;
+        height: 2rem;
+        width: 1rem;
+      }
+
+      input[type="range"]:focus::-moz-range-thumb {
+        border: 1px solid var(--termometro);
+        outline: 3px solid var(--termometro);
+        outline-offset: 0.125rem;
+      }
+    </style>
+  </head>
+  <body>
+    <input id="termometro" type="range" min="26" max="34" step="2" value="26" />
+
+    <div id="impactos">
+      <p id="humano"></p>
+      <p id="ambiente"></p>
+    </div>
+
+    <script>
+      const temperaturas = [
+        {
+          celsius: 26,
+          humano: "Lalala",
+          ambiente: "Lululu",
+        },
+        {
+          celsius: 28,
+          humano: "Hahaha",
+          ambiente: "Huhuhu",
+        },
+      ];
+
+      function mostrarImpacto() {
+        const match = temperaturas.find(
+          (temperatura) => temperatura.celsius === Number(termometro.value)
+        );
+
+        if (!match) return;
+
+        humano.textContent = match.humano;
+        ambiente.textContent = match.ambiente;
+
+        // Atualiza a variavel CSS --temperatura
+      }
+
+      termometro.oninput = mostrarImpacto;
+
+      mostrarImpacto();
+    </script>
+  </body>
+</html>
