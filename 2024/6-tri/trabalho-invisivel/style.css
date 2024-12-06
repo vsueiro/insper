@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #eee;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 24px;
+}
+
+#jogo {
+  height: 75vh;
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid #ccc;
+  margin-block: 48px;
+}
