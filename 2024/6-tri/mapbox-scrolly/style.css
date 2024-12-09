@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: Lavender;
+  color: Indigo;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.sticky {
+  align-items: center;
+  background: Indigo;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+}
+
+.steps {
+  color: Lavender;
+  margin: 0 auto;
+  max-width: 600px;
+  position: relative;
+}
+
+.step {
+  font-size: 24px;
+  height: 100vh;
+  height: 100svh;
+  padding: 0 32px;
+  outline: 1px solid DeepPink;
+}
+
+.content {
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  width: fit-content;
+}
+
+p {
+  font-size: 18px;
+  margin-block: 48px;
+  margin-inline: auto;
+  max-width: 600px;
+  width: calc(100% - 48px);
+}
+
+input {
+  font-family: inherit;
+  width: 100%;
+  max-width: 600px;
+  padding: 16px;
+  font-size: 24px;
+  margin: 0 auto;
+  color: inherit;
+  display: block;
+}
+
+#map {
+  position: absolute;
+  inset: 0;
+}

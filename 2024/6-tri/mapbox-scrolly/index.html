@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrolly</title>
+
+    <!-- Styles -->
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/scrollama" defer></script>
+    <script
+      src="https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@turf/turf" defer></script>
+    <script src="formulario.js" defer></script>
+    <script src="mapa.js" defer></script>
+    <script src="scrolly.js" defer></script>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus natus
+      dignissimos quasi, tempore animi, deleniti sequi, molestias sit ad ullam
+      iure magni aliquid illo laboriosam facere quas quam error nesciunt.
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus natus
+      dignissimos quasi, tempore animi, deleniti sequi, molestias sit ad ullam
+      iure magni aliquid illo laboriosam facere quas quam error nesciunt.
+    </p>
+
+    <form id="formulario">
+      <input
+        type="search"
+        id="endereco"
+        placeholder="Insira seu endereço"
+        required
+      />
+    </form>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus natus
+      dignissimos quasi, tempore animi, deleniti sequi, molestias sit ad ullam
+      iure magni aliquid illo laboriosam facere quas quam error nesciunt.
+    </p>
+
+    <div class="scrolly">
+      <div class="sticky">
+        <div id="map"></div>
+      </div>
+
+      <div class="steps">
+        <div class="step" data-secao="1" id="narrativa">
+          <div class="content">Seção 1</div>
+        </div>
+        <div class="step" data-secao="2">
+          <div class="content">Seção 2</div>
+        </div>
+        <div class="step" data-secao="3">
+          <div class="content">Seção 3</div>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus natus
+      dignissimos quasi, tempore animi, deleniti sequi, molestias sit ad ullam
+      iure magni aliquid illo laboriosam facere quas quam error nesciunt.
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus natus
+      dignissimos quasi, tempore animi, deleniti sequi, molestias sit ad ullam
+      iure magni aliquid illo laboriosam facere quas quam error nesciunt.
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus natus
+      dignissimos quasi, tempore animi, deleniti sequi, molestias sit ad ullam
+      iure magni aliquid illo laboriosam facere quas quam error nesciunt.
+    </p>
+  </body>
+</html>
