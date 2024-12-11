@@ -18,12 +18,13 @@ map.scrollZoom.disable();
 // Função para calcular o quadrado usando Turf.js
 function quadrado(centro, lado) {
   const metade = lado / 2;
+  const diagonal = metade * Math.sqrt(2);
 
   // Criar pontos nos 4 cantos
-  const topLeft = turf.destination(centro, metade, -135, { units: "meters" });
-  const topRight = turf.destination(centro, metade, -45, { units: "meters" });
-  const bottomRight = turf.destination(centro, metade, 45, { units: "meters" });
-  const bottomLeft = turf.destination(centro, metade, 135, { units: "meters" });
+  const topLeft = turf.destination(centro, diagonal, -135, { units: "meters" });
+  const topRight = turf.destination(centro, diagonal, -45, { units: "meters" });
+  const bottomRight = turf.destination(centro, diagonal, 45, { units: "meters" });
+  const bottomLeft = turf.destination(centro, diagonal, 135, { units: "meters" });
 
   // Retornar o polígono
   return turf.polygon([
